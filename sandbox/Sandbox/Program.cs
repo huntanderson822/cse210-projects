@@ -1,51 +1,30 @@
 using System;
 using System.Configuration.Assemblies;
 using System.Diagnostics.CodeAnalysis;
+using System.Reflection;
 using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
 
-class Program
+public class Program
 {
     static void Main()
     {
-        List<double> prices = new List<double>();
+        List<int> ages = new List<int> {12, 17, 18, 21, 15, 30};
 
-        AddPrices(prices);
-        PrintSummary(prices);
-    }    
-    static void AddPrices(List<double> prices)
-    {
-        Console.WriteLine("Enter a price (or type done): ");
-        string userInput = Console.ReadLine();
-        if (userInput == "done")
+        foreach (int age in ages)
         {
-            
-        }
-        else
-        {
-            int price = int.Parse(userInput);
-            prices.Add(price);
+            if (CanVote(age))
+            {
+                Console.WriteLine(age + " can vote.");
+            }
+            else
+            {
+                Console.WriteLine(age + " cannont vote.");
+            }
         }
     }
-
-    static double GetToal(List<double> prices)
+    public static bool CanVote(int age)
     {
-        
-    }
-    static double GetAverage(List<double> prices)
-    {
-        // TODO: return average (handle empty list)
-        return 0;
-    }
-
-    static double GetHighest(List<double> prices)
-    {
-        // TODO: return highest price (handle empty list)
-        return 0;
-    }
-
-    static void PrintSummary(List<double> prices)
-    {
-        // TODO: use the functions above and print results
+        return age >= 18;
     }
 }
