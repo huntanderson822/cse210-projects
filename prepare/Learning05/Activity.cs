@@ -8,7 +8,7 @@ using System.Threading;
 
 public abstract class Activity
 {
-    // Private member variables -- encapsulation baby
+    // Private member variables
     private string _name;
     private string _description;
     private int _duration;
@@ -38,7 +38,7 @@ public abstract class Activity
         Console.Clear();
     }
 
-    // Shows the closing screen -- good job, you did the thing
+    // Shows the closing screen + good job, you did the thing
     public void ClosingDisplay()
     {
         Console.WriteLine("\nGood job!!");
@@ -60,7 +60,7 @@ public abstract class Activity
         return seconds;
     }
 
-    // The spinner animation -- looks cool and gives the user something to stare at
+    // The spinner animation which looks cool and gives the user something to stare at
     public void ShowSpinner(int seconds)
     {
         string[] spinnerFrames = { "|", "/", "-", "\\" };
@@ -73,7 +73,7 @@ public abstract class Activity
         Console.Write("\r  \r"); // clear the spinner when done
     }
 
-    // Countdown that shows the number ticking down -- satisfying to watch ngl
+    // Countdown that shows the number ticking down -- satisfying to watch not gonna lie
     public void ShowCountdown(int seconds)
     {
         for (int i = seconds; i > 0; i--)
@@ -84,7 +84,7 @@ public abstract class Activity
         Console.Write("\r   \r"); // clear it when done
     }
 
-    // This is the method each subclass MUST implement -- that's the whole point of abstract
+    // This is the method each subclass has to implement with the actual activity logic
     protected abstract void RunActivity();
 
     // The public method that kicks off the whole activity flow

@@ -11,7 +11,7 @@ public class Breathing : Activity
     private int _breathInSeconds;
     private int _breathOutSeconds;
 
-    // Constructor -- default to 4 seconds each which is pretty standard
+    // Constructor default to 4 seconds each which is pretty standard
     public Breathing() : base(
         "Breathing Activity",
         "This activity will help you relax by walking you through breathing in and out slowly. " +

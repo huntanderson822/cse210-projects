@@ -1,7 +1,7 @@
 // Program.cs
 // Main entry point for the Mindfulness App.
 // Handles the menu, creates activities, and logs how many times
-// each activity has been done (stretch challenge #1 -- activity log).
+// each activity has been done by the user.
 // The log saves to a file so it persists between runs too.
 
 using System;

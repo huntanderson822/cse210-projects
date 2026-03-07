@@ -14,7 +14,7 @@ public class Reflection : Activity
     private Random _random;
 
     // These track which prompts/questions we've already used this session
-    // (stretch challenge: don't repeat until all have been used)
+    // (stretch challenge -- don't repeat until all have been used)
     private List<string> _unusedPrompts;
     private List<string> _unusedQuestions;
 
